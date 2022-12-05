@@ -55,3 +55,10 @@ body {
 .profile.thumb {
     height: 48px;
 }
+
+input[type="text"], input[type="text"]:focus {
+    border: 0px;
+    border-radius: 25px;
+    outline: none;
+    padding: 8px;
+}
