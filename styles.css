@@ -3,7 +3,7 @@ body, .sidebar, .header, .top-head {
 }
 
 body {
-    grid-template: 1fr 4fr / 1fr minmax(max-content, 6fr);
+    grid-template: 1fr 4fr / 1fr minmax(max-content, 5fr);
     margin: 0;
     height: 100vh;
 }
@@ -57,7 +57,7 @@ input[type="text"], input[type="text"]:focus {
     border-radius: 25px;
     outline: none;
     padding: 8px;
-    height: 20px;
+    height: 12px;
     width: 85%;
 }
 
