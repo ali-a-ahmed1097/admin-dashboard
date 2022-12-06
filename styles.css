@@ -1,4 +1,4 @@
-body, .sidebar, .header, .top-head {
+body, .sidebar, .header, .top-head, .bottom-head {
     display: grid;
 }
 
@@ -45,7 +45,7 @@ body {
 
 .profile {
     border-radius: 50%;
-    height: 96px;
+    height: 72px;
 }
 
 .profile.thumb {
@@ -63,18 +63,33 @@ input[type="text"], input[type="text"]:focus {
 
 .header {
     grid-template-rows: min-content min-content;
+    grid-template-columns: 95%;
+    padding-bottom: 4px;
 }
 
-.top-head {
-    grid-template-columns: min-content minmax(min-content, 75%) repeat(3, max-content);
+.top-head, .bottom-head{
+    grid-template-columns: min-content minmax(min-content, 77%) repeat(3, max-content);
     grid-auto-flow: column;
     align-items: center;
     margin-left: 5%;
     gap: 24px;
 }
 
+.hello {
+    width: 85%;
+}
+
+.hello > h1 {
+    margin: 0;
+}
+
 button {
     background-color: #1992df;
+    color: white;
     border-radius: 25px;
     border: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100px;
+    height: 36px;
 }
