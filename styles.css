@@ -1,8 +1,4 @@
-body,
-.sidebar,
-.header,
-.top-head,
-.bottom-head {
+body, .sidebar, .header, .top-head, .bottom-head, .content, .projects, .p-card, .announcements {
     display: grid;
 }
 
@@ -11,6 +7,7 @@ body {
     margin: 0;
     height: 100vh;
     row-gap: 4px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .sidebar {
@@ -23,24 +20,15 @@ body {
     row-gap: 16px;
 }
 
-.content,
-input[type="text"] {
+.content, input[type="text"] {
     background-color: #e2e8f0;
 }
 
-.a-card,
-.p-card,
-.t-card {
+.a-card, .p-card, .t-card {
     background-color: white;
 }
 
-/* 
-.projects, .announcements, .trending, .content, .a-card, .p-card, .t-card {
-    border: 1px solid black;
-} */
-
-.filler,
-.reg {
+.filler, .reg {
     height: 24px;
 }
 
@@ -62,8 +50,7 @@ input[type="text"] {
     height: 48px;
 }
 
-input[type="text"],
-input[type="text"]:focus {
+input[type="text"], input[type="text"]:focus {
     border: 0px;
     border-radius: 25px;
     outline: none;
@@ -81,8 +68,7 @@ input[type="text"]:focus {
     box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
 }
 
-.top-head,
-.bottom-head {
+.top-head, .bottom-head {
     grid-template-columns: min-content minmax(min-content, 77%) repeat(3, max-content);
     grid-auto-flow: column;
     align-items: center;
@@ -107,4 +93,65 @@ button {
     font-weight: bold;
     width: 100px;
     height: 36px;
+}
+
+.content {
+    grid-template-columns: min-content min-content;
+    grid-template-rows: min-content min-content;
+    padding-left: 20px;
+    gap: 16px;
+}
+
+.projects {
+    grid-row: 1 / 3;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 40px repeat(auto-fill, 225px);
+    justify-content: center;
+    gap: 16px;
+}
+
+.p-card {
+    width: 400px;
+    height: 225px;
+    border-radius: 8px;
+    box-shadow: inset 60px 0px 0px -50px gold;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, 25px);
+    grid-template-rows: repeat(auto-fill, 25px)
+}
+
+.p-card > h2 {
+    grid-column: 2 / 19;
+}
+
+.p-card > div {
+    grid-column: 2 / 14;
+    grid-row: 3 / 8;
+    font-size: 18px;
+    color: gray;
+}
+
+.p-card > img:first-of-type {
+    grid-area: 8 / 10 / 9 / 11;
+}
+
+.p-card > img:nth-of-type(2) {
+    grid-area: 8 / 12 / 9 / 13;
+}
+
+.p-card > img:nth-of-type(3) {
+    grid-area: 8 / 14 / 9 / 15;
+}
+
+#p {
+    justify-self: start;
+    grid-column: 1 / 3;
+}
+
+.a-card:first-of-type, .t-card:first-of-type {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.a-card:last-of-type, .t-card:last-of-type {
+    border-radius: 0px 0px 8px 8px;
 }
