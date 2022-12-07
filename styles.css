@@ -1,4 +1,4 @@
-body, .sidebar, .header, .top-head, .bottom-head, .content, .projects, .p-card, .announcements {
+body, .sidebar, .header, .top-head, .bottom-head, .content, .projects, .p-card, .a-card, .t-card {
     display: grid;
 }
 
@@ -99,7 +99,7 @@ button {
     grid-template-columns: min-content min-content;
     grid-template-rows: min-content min-content;
     padding-left: 20px;
-    gap: 16px;
+    column-gap: 16px;
 }
 
 .projects {
@@ -114,7 +114,7 @@ button {
     width: 400px;
     height: 225px;
     border-radius: 8px;
-    box-shadow: inset 60px 0px 0px -50px gold;
+    box-shadow: inset 60px 0px 0px -50px gold, 5px 5px 5px rgba(182, 182, 182, 0.75);
     grid-auto-flow: column;
     grid-template-columns: repeat(auto-fill, 25px);
     grid-template-rows: repeat(auto-fill, 25px)
@@ -154,4 +154,47 @@ button {
 
 .a-card:last-of-type, .t-card:last-of-type {
     border-radius: 0px 0px 8px 8px;
+}
+
+.a-card, .t-card {
+    width: 450px;
+}
+
+.announcements > h2 {
+    margin-bottom: 0.38em;
+}
+
+.a-card {
+    box-sizing: border-box;
+    padding: 20px 40px;
+    border-bottom: 2px solid gray;
+}
+
+.a-card:last-of-type {
+    border-bottom: 0px;
+}
+
+.t-card {
+    grid-template-columns: repeat(auto-fill, 25px);
+    grid-template-rows: 30% 70%;
+    padding: 15px 0px 10px 10px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+    height: 80px;
+}
+
+.t-card > img {
+    grid-column: 2 / 4;
+}
+
+.t-card > div {
+    grid-column: 5 / 19;
+}
+
+.t-card > div:first-of-type {
+    font-weight: bold;
+}
+
+.t-card, .a-card {
+    box-shadow: 5px 5px 5px rgba(182, 182, 182, 0.75);
 }
